@@ -1,0 +1,18 @@
+extends layout
+
+block content
+    <br>
+    <br>
+    h1(style="text-align:center;color:red") #{title}
+    form(method='POST', action='/medicines/add')
+        #form-group
+            label MEDICINE NAME
+            input.form-control(name='name', type='text')
+        #form-group
+            label USE
+            input.form-control(name='use', type='text')
+        #form-group
+            label DESCRIPTION
+            textarea.form-control(name='description',type='text')
+            <br>
+        input.btn.btn-primary(type='submit', value='submit')

@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    <br>
+    h1 #{title}
+    ul.list-group
+        each medicine, i in medicines
+            li.list-group-item
+                a(href="/medicines/"+medicine._id)= medicine.name
